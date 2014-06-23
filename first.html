@@ -29,7 +29,14 @@ document.getElementById('Moody').addEventListener('click', evalResult, false);
     function evalResult(e)
     {
         //alert("Thanks for clicking!");
-        document.getElementById('result').innerHTML = e.currentTarget.id;
+        //document.getElementById('result').innerHTML = e.currentTarget.id;
+        if(e.currentTarget.id == "Beatles" || e.currentTarget.id == "REO" || e.currentTarget.id == "Journey" || e.currentTarget.id == "U2")
+           {
+                document.getElementById('result').innerHTML = "<h1>Incorrect</h1>";
+           } else
+           {
+                document.getElementById('result').innerHTML = "<h1>Correct</h1>";   
+           }
     }
     </script>
 	<body>
