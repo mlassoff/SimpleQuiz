@@ -9,9 +9,42 @@
 <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="first.css" />
 	</head>
+    <style>
+        #container
+        {
+            margin: 5px;
+        }
+    </style>
+    <script>
+    window.onload = function()
+    {
+        document.getElementById('Beatles').addEventListener('click', evalResult, false);
+document.getElementById('REO').addEventListener('click', evalResult, false);
+document.getElementById('Journey').addEventListener('click', evalResult, false);
+document.getElementById('U2').addEventListener('click', evalResult, false);
+document.getElementById('Moody').addEventListener('click', evalResult, false);
+            
+    }
+    
+    function evalResult(e)
+    {
+        //alert("Thanks for clicking!");
+        document.getElementById('result').innerHTML = e.currentTarget.id;
+    }
+    </script>
 	<body>
 		<div id="container">
-
+            <div id="question">
+                Name the only band to go 20 years between number 1 Billboard hit songs.
+            </div><!--question -->
+            <div id="answers">
+                <button id="Beatles">Beatles</button>
+                <button id="REO">REO Speedwagon</button>
+                <button id="Journey">Journey</button>
+                <button id="U2">U2</button>
+                <button id="Moody">Moody Blues</button>
+            </div> <!-- answers -->
+            <div id="result"></div> <!-- result -->
 		</div> <!-- container -->
 	</body>
 </html>
